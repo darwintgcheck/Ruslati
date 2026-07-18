@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>birloto.com | İstifadəçi Paneli</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body data-page="dashboard">
+  <div class="background-glow"></div>
+  <header class="site-header compact-header">
+    <div class="brand-block small">
+      <span class="brand-chip">User Dashboard</span>
+      <h1 class="brand-title">birloto.com</h1>
+    </div>
+    <nav class="top-nav">
+      <a href="/index.html" class="nav-link">Lobby</a>
+      <a href="/game.html" class="nav-link">Oyun</a>
+      <a href="/dashboard.html" class="nav-link active">Panel</a>
+      <a href="/admin.html" class="nav-link">Admin</a>
+      <button id="logoutButton" class="nav-link nav-button">Çıxış</button>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="dashboard-grid three-columns top-align">
+      <article class="panel-card spotlight-card">
+        <div class="panel-header">
+          <h2>Profil və balans</h2>
+        </div>
+        <div id="dashboardProfile" class="profile-block loading-card">
+          <p>Profil yüklənir...</p>
+        </div>
+      </article>
+
+      <article class="panel-card">
+        <div class="panel-header">
+          <h2>Canlı raund</h2>
+          <a href="/game.html" class="text-link">Oyuna keç</a>
+        </div>
+        <div id="dashboardCurrentRound" class="status-panel loading-card">
+          <p>Raund məlumatı yüklənir...</p>
+        </div>
+      </article>
+
+      <article class="panel-card">
+        <div class="panel-header">
+          <h2>Sürətli əməliyyatlar</h2>
+        </div>
+        <div class="quick-actions">
+          <a href="/game.html" class="gold-button full-width">Bilet al və oyna</a>
+          <a href="/index.html" class="ghost-button full-width">Lobby-yə qayıt</a>
+        </div>
+      </article>
+    </section>
+
+    <section class="dashboard-grid two-columns">
+      <article class="panel-card">
+        <div class="panel-header">
+          <h3>Son biletlər</h3>
+        </div>
+        <div id="dashboardTickets" class="ticket-list loading-card">
+          <p>Biletlər yüklənir...</p>
+        </div>
+      </article>
+
+      <article class="panel-card">
+        <div class="panel-header">
+          <h3>Raund tarixçəsi</h3>
+        </div>
+        <div id="dashboardRounds" class="history-list loading-card">
+          <p>Tarixçə yüklənir...</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <div id="toastContainer" class="toast-container"></div>
+  <script src="/script.js"></script>
+</body>
+</html>

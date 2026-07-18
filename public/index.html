@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>birloto.com | Russian Loto Lobby</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body data-page="index">
+  <div class="background-glow"></div>
+  <header class="site-header">
+    <div class="brand-block">
+      <span class="brand-chip">Premium Lobby</span>
+      <h1 class="brand-title">birloto.com</h1>
+      <p class="brand-subtitle">Russian Loto üçün premium entertainment platforması</p>
+    </div>
+    <nav class="top-nav">
+      <a href="/index.html" class="nav-link active">Lobby</a>
+      <a href="/game.html" class="nav-link">Oyun</a>
+      <a href="/dashboard.html" class="nav-link">Panel</a>
+      <a href="/admin.html" class="nav-link">Admin</a>
+      <a href="/login.html" class="nav-link nav-cta guest-only">Giriş</a>
+      <a href="/register.html" class="nav-link nav-cta guest-only alt">Qeydiyyat</a>
+      <button id="logoutButton" class="nav-link nav-button auth-only hidden">Çıxış</button>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="hero-grid hero-lobby">
+      <div class="hero-card jumbo">
+        <div class="section-badge">Russian Loto</div>
+        <h2>1-dən 90-a qədər klassik loto atmosferi</h2>
+        <p>3x9 formatlı kartlar, avtomatik nömrə çəkilişi, canlı nəticə ekranı, balans və tarixçə ilə tam demo casino təcrübəsi.</p>
+        <div class="hero-actions">
+          <a href="/register.html" class="gold-button guest-only">İndi başla</a>
+          <a href="/game.html" class="gold-button auth-only hidden">Oyuna keç</a>
+          <a href="/dashboard.html" class="ghost-button auth-only hidden">Paneli aç</a>
+        </div>
+        <div class="rule-strip">
+          <div class="rule-item">
+            <strong>Bir sıra</strong>
+            <span>5 nömrə → 2x</span>
+          </div>
+          <div class="rule-item">
+            <strong>İki sıra</strong>
+            <span>10 nömrə → 5x</span>
+          </div>
+          <div class="rule-item">
+            <strong>Full House</strong>
+            <span>15 nömrə → 10x</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card compact">
+        <div class="section-badge">Canlı raund</div>
+        <div id="currentRoundCard" class="status-panel loading-card">
+          <p>Lobby məlumatları yüklənir...</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="dashboard-grid three-columns">
+      <article class="panel-card">
+        <div class="panel-header">
+          <h3>Oyun qaydaları</h3>
+        </div>
+        <ul class="feature-list">
+          <li>Hər kart 3 sıra və 9 sütundan ibarətdir.</li>
+          <li>Hər kartda 15 rəqəm və 24 boş xana olur.</li>
+          <li>Nömrələr sistem tərəfindən tək-tək açılır.</li>
+          <li>Birdən çox bilet almaq mümkündür.</li>
+          <li>Qazanc avtomatik hesablanır və balansa əlavə olunur.</li>
+        </ul>
+      </article>
+
+      <article class="panel-card stat-card">
+        <div class="panel-header">
+          <h3>Platforma üstünlükləri</h3>
+        </div>
+        <div class="stat-stack">
+          <div class="stat-row"><span>Session auth</span><strong>Aktiv</strong></div>
+          <div class="stat-row"><span>Auto draw</span><strong>Aktiv</strong></div>
+          <div class="stat-row"><span>Responsive UI</span><strong>Aktiv</strong></div>
+          <div class="stat-row"><span>Admin panel</span><strong>Aktiv</strong></div>
+          <div class="stat-row"><span>Tarixçə</span><strong>Aktiv</strong></div>
+        </div>
+      </article>
+
+      <article class="panel-card">
+        <div class="panel-header">
+          <h3>Son raundlar</h3>
+        </div>
+        <div id="recentRoundsList" class="history-list">
+          <div class="mini-placeholder">Raund tarixçəsi yüklənir...</div>
+        </div>
+      </article>
+    </section>
+
+    <section class="wide-highlight">
+      <div class="wide-highlight-content">
+        <span class="section-badge">Hesab sistemi</span>
+        <h3>Yeni hesab üçün bonus balansı, demo cüzdan və bilet idarəetməsi</h3>
+        <p>Qeydiyyatdan sonra başlanğıc demo balansı və bonus verilir. Lobby-dən oyuna keçərək raund üçün bir və ya bir neçə bilet ala bilərsiniz.</p>
+      </div>
+    </section>
+  </main>
+
+  <div id="toastContainer" class="toast-container"></div>
+  <script src="/script.js"></script>
+</body>
+</html>

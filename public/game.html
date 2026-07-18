@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>birloto.com | Russian Loto Oyun</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body data-page="game">
+  <div class="background-glow"></div>
+  <header class="site-header compact-header">
+    <div class="brand-block small">
+      <span class="brand-chip">Game Arena</span>
+      <h1 class="brand-title">Russian Loto</h1>
+    </div>
+    <nav class="top-nav">
+      <a href="/index.html" class="nav-link">Lobby</a>
+      <a href="/game.html" class="nav-link active">Oyun</a>
+      <a href="/dashboard.html" class="nav-link">Panel</a>
+      <a href="/admin.html" class="nav-link">Admin</a>
+      <button id="logoutButton" class="nav-link nav-button">Çıxış</button>
+    </nav>
+  </header>
+
+  <main class="page-shell">
+    <section class="dashboard-grid game-layout">
+      <article class="panel-card game-main-card">
+        <div class="panel-header">
+          <h2>Canlı çəkiliş</h2>
+          <div id="gameStatusBadge" class="status-badge">Yüklənir...</div>
+        </div>
+
+        <div class="draw-spotlight">
+          <div>
+            <p class="muted-label">Son açılan nömrə</p>
+            <div id="lastNumberBall" class="number-ball mega">--</div>
+          </div>
+          <div class="draw-meta">
+            <div class="stat-row"><span>Raund ID</span><strong id="roundIdValue">--</strong></div>
+            <div class="stat-row"><span>Qalan nömrə</span><strong id="remainingCountValue">--</strong></div>
+            <div class="stat-row"><span>Bilet qiyməti</span><strong id="ticketPriceValue">--</strong></div>
+          </div>
+        </div>
+
+        <div class="action-bar game-actions">
+          <form id="buyTicketsForm" class="inline-form">
+            <label>
+              <span>Bilet sayı</span>
+              <input type="number" name="quantity" value="1" min="1" max="20" required>
+            </label>
+            <button type="submit" class="gold-button">Bilet al</button>
+          </form>
+          <button id="startRoundButton" class="ghost-button">Raundu başlat</button>
+        </div>
+
+        <div id="drawnNumbersGrid" class="drawn-numbers-grid"></div>
+      </article>
+
+      <aside class="panel-card game-sidebar">
+        <div class="panel-header">
+          <h3>Hesab məlumatı</h3>
+        </div>
+        <div id="gameUserCard" class="profile-block loading-card">
+          <p>İstifadəçi məlumatı yüklənir...</p>
+        </div>
+
+        <div class="panel-header lower-space">
+          <h3>Son qaliblər</h3>
+        </div>
+        <div id="winnersFeed" class="history-list">
+          <div class="mini-placeholder">Qaliblər görünəcək</div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="panel-card full-width-card">
+      <div class="panel-header">
+        <h2>Sənin biletlərin</h2>
+      </div>
+      <div id="ticketsBoard" class="ticket-board loading-card">
+        <p>Biletlər yüklənir...</p>
+      </div>
+    </section>
+  </main>
+
+  <div id="toastContainer" class="toast-container"></div>
+  <script src="/script.js"></script>
+  <script src="/game.js"></script>
+</body>
+</html>

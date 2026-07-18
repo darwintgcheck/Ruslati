@@ -1,0 +1,17 @@
+{
+  "siteName": "birloto.com",
+  "gameName": "Russian Loto Demo",
+  "ticketPrice": 100,
+  "welcomeBonus": 500,
+  "startingBalance": 2000,
+  "rowMultiplier": 2,
+  "twoRowMultiplier": 5,
+  "fullHouseMultiplier": 10,
+  "autoDrawIntervalMs": 2500,
+  "allowSelfStart": true,
+  "theme": {
+    "primary": "#7a0014",
+    "secondary": "#d4af37",
+    "dark": "#0f0a0a"
+  }
+}
